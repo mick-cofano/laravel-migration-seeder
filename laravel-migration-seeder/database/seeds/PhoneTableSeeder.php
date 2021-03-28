@@ -14,6 +14,7 @@ class PhoneTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+        for($i = 0; $i < 100; $i++) {
         $phone = new Phone();
        // $phone->brand = 'Apple';
        // $phone->model = 'iPhone';
@@ -29,5 +30,7 @@ class PhoneTableSeeder extends Seeder
         $phone->color = 'Silver';
         $phone->capacity = rand(80, 256);
         $phone->save();
+        
+        }
     }
 }
