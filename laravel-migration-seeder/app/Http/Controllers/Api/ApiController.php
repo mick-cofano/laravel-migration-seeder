@@ -10,7 +10,11 @@ use App\Phone;
 class ApiController extends Controller
 {
     public function getFirstPhone() {
-        $firstPhone = Phone::orderBy('id', 'asc')->first();
-        dd($firstPhone);
+       // $firstPhone = Phone::orderBy('id', 'asc')->first();
+       // dd($firstPhone);
+
+       $allPhone = Phone::all();
+
+       return response()->json($allPhone);
     }
 }
